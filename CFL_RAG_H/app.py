@@ -12,7 +12,7 @@ import time
 from dotenv import load_dotenv
 
 # Load environment variables from .env file (for local development)
-load_dotenv()
+# load_dotenv()
 
 # --- Configuration ---
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
@@ -166,5 +166,5 @@ def logout():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000)) # Heroku assigns a port via PORT environment variable
-    app.run(debug=True, host='0.0.0.0', port=port)
+    
+    app.run()
